@@ -7,7 +7,6 @@ const PubSub = {
     document.dispatchEvent(event);
   },
   subscribe: function (channel, callback) {
-    console.log(`subscribe to channel: ${channel}`);
     document.addEventListener( channel, callback);
   }
 }

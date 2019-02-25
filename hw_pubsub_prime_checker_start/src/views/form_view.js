@@ -9,7 +9,6 @@ FormView.prototype.bindEvents = function () {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     const inputtedNum = event.target.number.value;
-    console.log(inputtedNum);
     // #when this form is submitted publish out to whole channel the inputtedNum
     PubSub.publish('FormView:num-submitted', inputtedNum);
   });

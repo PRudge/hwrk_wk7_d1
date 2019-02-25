@@ -7,9 +7,11 @@ const PrimeChecker = function () {
 PrimeChecker.prototype.bindEvents = function () {
   PubSub.subscribe('FormView:num-submitted', (event) => {
     const inputtedNum = event.detail;
-    console.dir(`inputtedNum ${inputtedNum}`);
     const result = this.numberIsPrime(inputtedNum);
-    PubSub.publish('PrimeChecker:result-calculated', result);
+    // create an object with the true/false result and the actual inputted number
+    PubSub.publish('PrimeChecker:result-calculated',
+      {result: result,
+      number: inputtedNum});
   });
 };
 

@@ -11,21 +11,33 @@ ResultView.prototype.bindEvents = function () {
 };
 
 
-ResultView.prototype.displayResult = function (result) {
-
+ResultView.prototype.displayResult = function (resultDets) {
    const resultElement = document.querySelector('#result');
-   const displayRes = this.isPrimeOrNotText(result);
+   const largestPrime = document.querySelector("#largest-prime");
+
+   const displayRes = this.isPrimeOrNotText(resultDets);
+   const displayLargestPrime = this.theLargestPrime(resultDets);
+
    resultElement.textContent = displayRes;
+   largestPrime.textContent = displayLargestPrime;
 };
 
-ResultView.prototype.isPrimeOrNotText = function (result) {
+ResultView.prototype.isPrimeOrNotText = function (resultDets) {
   let displayRes;
-  if (result === true){
-    displayRes =  `Yes! It's a prime number`;
+  if (resultDets.result === true){
+    displayRes =  `Yes! ${resultDets.number} is a prime number`;
   }else{
-    displayRes = `No! It's not a  prime number`;
+    displayRes = `No! ${resultDets.number} is not a prime number`;
   }
   return displayRes;
+};
+
+ResultView.prototype.theLargestPrime = function (resultDets) {
+  let largestPrime = "At 23,249,425 digits, the number, known as M77232917, is now the largest known prime";
+  if (resultDets.result === false){
+    largestPrime = "";
+  }
+  return largestPrime;
 };
 
 
