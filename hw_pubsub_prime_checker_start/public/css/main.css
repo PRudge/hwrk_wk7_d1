@@ -3,3 +3,67 @@ body {
   /* font-family: 'Rajdhani', sans-serif; */
   text-align: center;
 }
+
+input[type=submit], input[type=number]{
+  background: #751636;
+  padding: 8px 15px 8px 15px;
+  border: none;
+  color: #fff;
+  margin-top: 1rem;
+}
+input[type=submit]:hover,input[type=number]: hover{
+  background: #d0ab95;
+  box-shadow:none;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+    margin-top: 1rem;
+}
+
+input[type=submit],input[type=number]{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border:1px solid #BEBEBE;
+  padding: 7px;
+    margin-top: 1rem;
+  outline: none;
+}
+input[type=submit]:focus, input[type=number]:focus{
+  -moz-box-shadow: 0 0 8px #605436;
+  -webkit-box-shadow: 0 0 8px #605436;
+  box-shadow: 0 0 8px #605436;
+  border: 1px solid #605436;
+    margin-top: 1rem;
+}
+
+input[type=button]{
+  /* width: 150px;
+  height: 50px; */
+  background: red;
+  padding: 8px 15px 8px 15px;
+  border: none;
+  color: #fff;
+  margin-top: 4rem;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border:1px solid #BEBEBE;
+  padding: 7px;
+  margin-top: 1rem;
+  outline: none;
+}
+input[type=button]:hover{
+  background: #d0ab95;
+  box-shadow:none;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+    margin-top: 1rem;
+}
+
+input[type=button]:focus{
+  -moz-box-shadow: 0 0 8px #605436;
+  -webkit-box-shadow: 0 0 8px #605436;
+  box-shadow: 0 0 8px #605436;
+  border: 1px solid #605436;
+    margin-top: 1rem;
+}
