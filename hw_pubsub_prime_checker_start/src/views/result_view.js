@@ -40,5 +40,4 @@ ResultView.prototype.theLargestPrime = function (resultDets) {
   return largestPrime;
 };
 
-
 module.exports = ResultView;
